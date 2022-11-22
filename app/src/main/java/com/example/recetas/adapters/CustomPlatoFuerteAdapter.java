@@ -16,11 +16,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class CustomPlatosFuertesAdapter extends RecyclerView.Adapter<CustomPlatosFuertesAdapter.ViewHolder> {
-    private ArrayList<PlatosFuertes> mDataSet;
+public class CustomPlatoFuerteAdapter extends RecyclerView.Adapter<CustomPlatoFuerteAdapter.ViewHolder> {
+    private ArrayList<PlatosFuertesList> mDataSet;
     private OnClicPlatosFuertesListener listener;
 
-    public CustomPlatosFuertesAdapter(ArrayList<PlatosFuertes> dataSet, OnClicPlatosFuertesListener listener) {
+    public CustomPlatoFuerteAdapter(ArrayList<PlatosFuertesList> dataSet, OnClicPlatosFuertesListener listener) {
         mDataSet = dataSet;
         this.listener = listener;
     }
@@ -38,8 +38,8 @@ public class CustomPlatosFuertesAdapter extends RecyclerView.Adapter<CustomPlato
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PlatosFuertes myPlatoFuerte = mDataSet.get(position);
-        holder.setPlatosFuertes(myPlatoFuerte);
+        PlatosFuertesList myPlatoFuerte = mDataSet.get(position);
+        holder.setPlatosFuertesList(myPlatoFuerte);
         holder.getTextName().setText(myPlatoFuerte.getNombre());
         ImageView ivBasicImage =holder.getImgUrl();
         Picasso.with(ivBasicImage.getContext()).load(myPlatoFuerte.getUrlImg()).into(ivBasicImage);
