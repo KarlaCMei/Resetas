@@ -1,5 +1,6 @@
 package com.example.recetas.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.recetas.LoginActivity;
+import com.example.recetas.MainActivity;
 import com.example.recetas.R;
 import com.example.recetas.data.PlatosFuertes;
 import com.example.recetas.data.PlatosFuertesList;

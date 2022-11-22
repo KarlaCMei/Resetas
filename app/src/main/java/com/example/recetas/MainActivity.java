@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /***ES IMPORTANTE QUE CAMBIES ESTE SPLASH A LA PANTALLA PRINCIPAL EN ESTE CASO ES LOGIN ACTIVITY
+     * VALIDAR SI SE ELIMINA MAIN Y TE QUEDAS CON LOGIN O LO QUE CREAS CORRECTO*/
     private void loadSplash(){
         SplashScreen customSplash = SplashScreen.installSplashScreen(this);
 
@@ -25,10 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean shouldKeepOnScreen() {
-
                 boolean existUser = true;
                 if(existUser){
-                    startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    MainActivity.this.startActivity(new Intent(MainActivity.this,LoginActivity.class));
                     finish();
                 }
                 return false;
