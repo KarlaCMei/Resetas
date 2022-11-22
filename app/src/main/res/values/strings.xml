@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Recetas</string>
+
+    <string name="search_title_plato_fuerte">BUSQUEDA PLATO FUERTE</string>
+    <string name="search_title_postre">BUSQUEDA POSTRES</string>
+    <string name="search_title_sopa">BUSQUEDA SOPAS</string>
+</resources>
