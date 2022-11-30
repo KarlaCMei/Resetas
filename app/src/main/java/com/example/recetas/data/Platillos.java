@@ -1,20 +1,20 @@
 package com.example.recetas.data;
 
 
-public class PlatosFuertesList {
+public class Platillos {
     private String name;
     private String ingredients;
     private String preparation;
     private String urlImg;
 
 
-    public PlatosFuertesList() {
+    public Platillos() {
     }
 
-    public PlatosFuertesList(String calificacion, String nombre, String descripcion, String urlImg) {
-        this.preparation = calificacion;
+    public Platillos(String preparation, String nombre, String ingredients, String urlImg) {
+        this.preparation = preparation;
         this.name = nombre;
-        this.ingredients = descripcion;
+        this.ingredients = ingredients;
         this.urlImg = urlImg;
     }
 
@@ -41,10 +41,6 @@ public class PlatosFuertesList {
     public void setPreparation(String preparation) {
         this.preparation = preparation;
     }
-
-
-
-
 
     public String getUrlImg() {
         return urlImg;

@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.MainActivity"
-        android:background="@drawable/splash_image">
+        android:background="@drawable/platos_fuertes_background">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list_hotels"
+            android:id="@+id/list_platillos"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,17 @@
             tools:listitem="@layout/menu_item_list"
             tools:itemCount="2"/>
 
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_create_receta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="30dp"
+            app:tint="@color/cafe"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/ic_add_receta"
+            app:backgroundTint="@color/background_splash"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

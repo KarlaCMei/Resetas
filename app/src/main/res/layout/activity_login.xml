@@ -15,33 +15,71 @@
         >
 
 
+        <TextView
+            android:id="@+id/text_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Login"
+            android:textColor="@color/cafe"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Username"
+            android:textColor="@color/cafe"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/input_user_emali"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
         <EditText
             android:id="@+id/input_user_emali"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:hint="e-mail"
-            android:textSize="25dp"
-            android:inputType="textEmailAddress"
             android:layout_margin="20dp"
-            android:textColorHint="@color/black"
+            android:background="@color/cafe2"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Password"
+            android:textColor="@color/cafe"
+            android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/input_user_password"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/input_user_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="password"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:inputType="textPassword"
             android:layout_margin="20dp"
-            android:textColorHint="@color/black"
-            android:background="@android:color/transparent"
+            android:textColor="@color/white"
+            android:background="@color/cafe2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Entrar"
+            android:layout_marginTop="20dp"
             android:background="@drawable/esquina_redondeada"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -2,10 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.recetas">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,7 +17,17 @@
         android:theme="@style/Theme.Recetas"
         tools:targetApi="31">
         <activity
-            android:name=".PlatoFuerteRecetasActivity"
+            android:name=".ObtenerDatos"
+            android:exported="false" />
+        <activity
+            android:name=".Detail_receta_activity"
+            android:theme="@style/Theme.Recetas.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".createRecetas"
+            android:exported="false" />
+        <activity
+            android:name=".MenuRecetasActivity"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"

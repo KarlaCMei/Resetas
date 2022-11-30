@@ -21,8 +21,8 @@ public class MenuActivity extends AppCompatActivity {
         binding.buttonPlatoFuerte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, PlatoFuerteRecetasActivity.class);
-                intent.putExtra(Constants.TITLE_SEARCH_ACTIVITY, getString(R.string.search_title_plato_fuerte));
+                Intent intent = new Intent(MenuActivity.this, MenuRecetasActivity.class);
+                intent.putExtra(Constants.KEY_RECETAS,Constants.PLATO_FUERTE);
                 startActivity(intent);
             }
         });
@@ -30,8 +30,8 @@ public class MenuActivity extends AppCompatActivity {
         binding.buttonPostres.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, PlatoFuerteRecetasActivity.class);
-                intent.putExtra(Constants.TITLE_SEARCH_ACTIVITY, getString(R.string.search_title_postre));
+                Intent intent = new Intent(MenuActivity.this, MenuRecetasActivity.class);
+                intent.putExtra(Constants.KEY_RECETAS,Constants.POSTRES);
                 startActivity(intent);
             }
         });
@@ -40,10 +40,13 @@ public class MenuActivity extends AppCompatActivity {
         binding.buttonSopas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuActivity.this, PlatoFuerteRecetasActivity.class);
-                intent.putExtra(Constants.TITLE_SEARCH_ACTIVITY, getString(R.string.search_title_sopa));
+                Intent intent = new Intent(MenuActivity.this, MenuRecetasActivity.class);
+                intent.putExtra(Constants.KEY_RECETAS,Constants.SOPAS);
                 startActivity(intent);
             }
         });
+
+
+
     }
 }

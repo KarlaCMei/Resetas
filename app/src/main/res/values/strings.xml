@@ -4,4 +4,30 @@
     <string name="search_title_plato_fuerte">BUSQUEDA PLATO FUERTE</string>
     <string name="search_title_postre">BUSQUEDA POSTRES</string>
     <string name="search_title_sopa">BUSQUEDA SOPAS</string>
+
+    <string name="mensaje_ingresar">Porfavor ingrese los datos correctos</string>
+    <string name="preference_file_key">CustomSharedPreferences</string>
+
+    <string name="search_name_receta">Nombre de la receta</string>
+    <string name="text_hint_receta_name">Ingrese el nombre del platillo</string>
+    <string name="search_type_platillo">Tipo de platillo</string>
+    <string name="checkBox_plato_fuerte">Plato fuerte</string>
+    <string name="checkBox_sopas">Sopas</string>
+    <string name="checkBox_postres">Postres</string>
+    <string name="search_especificaciones">Especificaciones</string>
+    <string name="text_hint_num_personas">Num.Personas</string>
+    <string name="text_hint_time">Tiempo</string>
+    <string name="search_dificultad">Dificuldad</string>
+    <string name="checkBox_dificil">Dificil</string>
+    <string name="checkBox_medio">Medio</string>
+    <string name="checkBox_facil">Facil</string>
+    <string name="search_ingredientes">Ingredientes</string>
+    <string name="text_hint_ingredientes">Ingredientes</string>
+    <string name="search_preparacion">Preparacion</string>
+    <string name="text_hint_preparacion">Preparación</string>
+    <string name="btn_create_receta">Guardar receta</string>
+    <string name="text_ingredients">Ingredientes</string>
+    <string name="text_preparacion">Metodo de preparacion</string>
+
+
 </resources>

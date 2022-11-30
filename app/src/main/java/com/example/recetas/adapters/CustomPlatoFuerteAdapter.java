@@ -1,5 +1,7 @@
 package com.example.recetas.adapters;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,17 +12,40 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.recetas.R;
-import com.example.recetas.data.PlatosFuertes;
-import com.example.recetas.data.PlatosFuertesList;
+import com.example.recetas.data.Platillos;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class CustomPlatoFuerteAdapter extends RecyclerView.Adapter<CustomPlatoFuerteAdapter.ViewHolder> {
-    private ArrayList<PlatosFuertesList> mDataSet;
+    private ArrayList<Platillos> mDataSet;
     private OnClicPlatosFuertesListener listener;
+    public static SharedPreferences customShared;
 
-    public CustomPlatoFuerteAdapter(ArrayList<PlatosFuertesList> dataSet, OnClicPlatosFuertesListener listener) {
+   /* public static SharedPreferences getInstance() {
+        if (customShared == null) {
+            customShared = App.instance.getSharedPreferences(
+                    App.instance.getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        }
+        return customShared;
+    }
+
+    public static void setSharedString(String key,String value){
+        SharedPreferences sharedPref = getInstance();
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, value);
+        editor.apply();
+    }
+
+    public static String getSharedString(String key){
+        SharedPreferences sharedPref = getInstance();
+        return sharedPref.getString(key, "");
+    }*/
+
+
+
+
+    public CustomPlatoFuerteAdapter(ArrayList<Platillos> dataSet, OnClicPlatosFuertesListener listener) {
         mDataSet = dataSet;
         this.listener = listener;
     }
@@ -38,7 +63,7 @@ public class CustomPlatoFuerteAdapter extends RecyclerView.Adapter<CustomPlatoFu
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        PlatosFuertesList myPlatoFuerte = mDataSet.get(position);
+        Platillos myPlatoFuerte = mDataSet.get(position);
         holder.setPlatosFuertesList(myPlatoFuerte);
         holder.getTextName().setText(myPlatoFuerte.getNombre());
         ImageView ivBasicImage =holder.getImgUrl();
@@ -55,7 +80,7 @@ public class CustomPlatoFuerteAdapter extends RecyclerView.Adapter<CustomPlatoFu
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textName;
         private final ImageView imgUrl;
-        private PlatosFuertesList platosFuertesList;
+        private Platillos platosFuertesList;
         private OnClicPlatosFuertesListener listener;
 
         public ViewHolder(View v) {
@@ -63,7 +88,7 @@ public class CustomPlatoFuerteAdapter extends RecyclerView.Adapter<CustomPlatoFu
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    getListener().onClicPlatosFuertesListener(getPlatosFuertesList());
+                    getListener().onPlatosFueetesClicListener(getPlatosFuertesList());
                 }
             });
             textName = v.findViewById(R.id.text_name);
@@ -80,11 +105,11 @@ public class CustomPlatoFuerteAdapter extends RecyclerView.Adapter<CustomPlatoFu
             return imgUrl;
         }
 
-        public PlatosFuertesList getPlatosFuertesList() {
+        public Platillos getPlatosFuertesList() {
             return platosFuertesList;
         }
 
-        public void setPlatosFuertesList(PlatosFuertesList platosFuertes) {
+        public void setPlatosFuertesList(Platillos platosFuertes) {
             this.platosFuertesList = platosFuertes;
         }
 
